@@ -6,3 +6,10 @@ __pycache__/
 .DS_Store
 .env
 .claude/
+.vscode/
+
+# Deployment & diagnostics (local-only)
+Dockerfile
+Procfile
+diag_*.py
+smoke_test_*.py
