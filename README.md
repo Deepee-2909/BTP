@@ -1,9 +1,8 @@
 # DeepRead AI — Legal Risk Detection & RAG Q&A System
 
-An AI-powered system that ingests documents (PDF, DOCX, PPTX, Excel, Images, ZIP archives, and web pages), builds a hybrid search index, and provides two core capabilities:
+An AI-powered system that ingests documents (PDF, DOCX, PPTX, Excel, Images, ZIP archives, and web pages), builds a hybrid search index, and provides :
 
-1. **General RAG Q&A** — Ask questions about any uploaded document and get accurate, context-grounded answers.
-2. **Legal Risk Detection** — Automatically scans sponsorship/commercial agreements for risky, ambiguous, or one-sided clauses across 10 risk categories.
+1. **Legal Risk Detection** — Automatically scans sponsorship/commercial agreements for risky, ambiguous, or one-sided clauses across 10 risk categories.
 
 ## Architecture
 
@@ -86,33 +85,7 @@ uvicorn api_wrapper:app --host 0.0.0.0 --port 8000
 
 The API will be available at `http://localhost:8000`. Interactive docs at `http://localhost:8000/docs`.
 
-## API Endpoints
-
-### `POST /hackrx/run` — General RAG Q&A
-
-Send a document URL and a list of questions:
-
-```json
-{
-  "documents": "https://example.com/report.pdf",
-  "questions": [
-    "What is the main finding of this report?",
-    "What methodology was used?"
-  ]
-}
-```
-
-**Response:**
-
-```json
-{
-  "job_id": "report-a1b2c3d4",
-  "answers": [
-    "The main finding is...",
-    "The study used a mixed-methods approach..."
-  ]
-}
-```
+## API Endpoint
 
 ### `POST /analyze` — Legal Risk Detection
 
@@ -131,11 +104,11 @@ Set `"format": "json"` for structured JSON output.
 
 ### `GET /` — Health Check
 
-Returns `{"message": "DeepRead AI - Legal Risk Detection API is live"}`.
+Returns `{"message": "Legal Risk Detection API is live"}`.
 
 ## RAG Pipeline Tuning
 
-Both endpoints accept optional parameters to fine-tune retrieval:
+Optional parameters to fine-tune retrieval:
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
