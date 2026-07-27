@@ -1,4 +1,4 @@
-#Legal Risk Detection System
+# Legal Risk Detection System
 
 An AI-powered system that ingests documents (PDF, DOCX, PPTX, Excel, Images, ZIP archives, and web pages), builds a hybrid search index, and provides :
 
